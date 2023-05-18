@@ -20,5 +20,6 @@ jobs:
       name: Build the Docker image
       with:
         image: docker:19.03.12
-        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-        run: docker images
+        run: |
+          docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+          docker images

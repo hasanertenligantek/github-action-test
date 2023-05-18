@@ -15,8 +15,13 @@ jobs:
       with:
         username: hasanertenli13
         password: dckr_pat_JhoReBYQxOyKb0XPaLriWtfbdDk
-  docker-build:
+  docker-build-push:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Docker Build
-      uses: docker/setup-buildx-actions@v2
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: hasanertenli13/github-action-test:latest

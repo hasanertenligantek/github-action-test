@@ -10,6 +10,14 @@ jobs:
   deneme:
     runs-on: ubuntu-latest
     steps:
+    - name: Echo Command
+      run: echo Github Action
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      with:
+        image: docker:19.03.12

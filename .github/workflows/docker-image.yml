@@ -15,6 +15,11 @@ jobs:
       with:
         username: hasanertenli13
         password: dckr_pat_JhoReBYQxOyKb0XPaLriWtfbdDk
+  docker-buildx:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
   docker-build-push:
     runs-on: ubuntu-latest
     steps:

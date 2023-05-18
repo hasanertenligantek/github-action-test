@@ -10,7 +10,7 @@ jobs:
 
   build:
 
-    runs-on: docker:19.03.12
+    runs-on: docker:latest
 
     steps:
     - uses: actions/checkout@v3
